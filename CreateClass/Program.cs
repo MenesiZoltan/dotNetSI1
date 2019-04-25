@@ -7,19 +7,13 @@ namespace CreateClass
         static void Main(string[] args)
         {
 
-            Person person1 = new Person("Géza", DateTime.Now, Gender.Male);
-            Console.WriteLine(person1.ToString());
-            Console.WriteLine("\n");
-
-            Employee employee1 = new Employee("Zoli", DateTime.Now, Gender.Male, 10000, Profession.Necromancer);
-            Console.WriteLine(employee1.ToString());
-
-            Room room1 = new Room(employee1, 1);
-            Console.WriteLine("\n");
-            Console.WriteLine(room1.employee.ToString());
-            Console.WriteLine(room1.GetRoomNumber());
-
-            Console.ReadLine();
+            Employee Kovacs = new Employee("Géza", DateTime.Now, Gender.Male, 1000, Profession.Necromancer);
+            Kovacs.Room = new Room(111);
+            Employee Kovacs2 = (Employee)Kovacs.Clone();
+            Kovacs2.Room.Number = 112;
+            Console.WriteLine(Kovacs.ToString());
+            Console.WriteLine(Kovacs2.ToString() + " " + "Room number: " + Kovacs2.Room.GetRoomNumber());
+            Console.ReadKey();
 
         }
 
@@ -47,7 +41,7 @@ namespace CreateClass
 
         }
 
-        class Employee: Person {
+        class Employee: Person, ICloneable {
 
             private int salary;
             private Profession profession;
@@ -58,6 +52,12 @@ namespace CreateClass
                 this.salary = salary;
             }
 
+            public Room Room { get; internal set; }
+
+            public object Clone()
+            {
+                return this.MemberwiseClone();
+            }
 
             override
             public String ToString()
@@ -70,15 +70,22 @@ namespace CreateClass
             public Employee employee;
             private int roomNumber;
 
-            public Room(Employee employee, int roomNumber) {
+            public Room(int roomNumber) {
 
-                this.employee = employee;
                 this.roomNumber = roomNumber;
             }
+
+            public int Number { get; internal set; }
 
             public int GetRoomNumber() {
                 return roomNumber;
             }
+
+        }
+
+        interface ICloneable {
+
+            object Clone();
 
         }
 
