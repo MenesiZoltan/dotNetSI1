@@ -1,0 +1,7 @@
+C:\Users\Ménesi Zoltán\source\repos\dotNetCodes\SI1\dotNetSI1\CreateClass\bin\Debug\CreateClass.exe.config
+C:\Users\Ménesi Zoltán\source\repos\dotNetCodes\SI1\dotNetSI1\CreateClass\bin\Debug\CreateClass.exe
+C:\Users\Ménesi Zoltán\source\repos\dotNetCodes\SI1\dotNetSI1\CreateClass\bin\Debug\CreateClass.pdb
+C:\Users\Ménesi Zoltán\source\repos\dotNetCodes\SI1\dotNetSI1\CreateClass\obj\Debug\CreateClass.csprojAssemblyReference.cache
+C:\Users\Ménesi Zoltán\source\repos\dotNetCodes\SI1\dotNetSI1\CreateClass\obj\Debug\CreateClass.csproj.CoreCompileInputs.cache
+C:\Users\Ménesi Zoltán\source\repos\dotNetCodes\SI1\dotNetSI1\CreateClass\obj\Debug\CreateClass.exe
+C:\Users\Ménesi Zoltán\source\repos\dotNetCodes\SI1\dotNetSI1\CreateClass\obj\Debug\CreateClass.pdb
